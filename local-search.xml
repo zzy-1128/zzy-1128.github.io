@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2024/05/08/123/"/>
+    <url>/2024/05/08/123/</url>
+    
+    <content type="html"><![CDATA[<p>hexo d报错</p><p>fatal: unable to access ‘<a href="https://github.com/username/username.github.io.git/">https://github.com/username/username.github.io.git/</a>‘: OpenSSL SSL_read: Connection was reset, errno 10054</p><p>解决方法：</p><p>在博客根目录下打开git bash，输入以下命令：</p><p>git config –global http.sslVerify “false”</p><p>再重新执行hexo d命令即可。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>学习使用Apache Hive</title>
+    <link href="/2024/05/08/%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8Apache-Hive/"/>
+    <url>/2024/05/08/%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8Apache-Hive/</url>
+    
+    <content type="html"><![CDATA[<h2 id="HIVE的作用"><a href="#HIVE的作用" class="headerlink" title="HIVE的作用"></a>HIVE的作用</h2><p>将数据文件<strong>映射</strong>为一张表。<br>将SQL语法解析编译成为MapReduce的执行程序。</p><p>![Hive架构](<a href="https://cdn.jsdelivr.net/gh/">https://cdn.jsdelivr.net/gh/</a> zzy-1128&#x2F;photohouse&#x2F;hexo&#x2F;hive_photo202405091045615.png)</p><h2 id="HIVE的组件"><a href="#HIVE的组件" class="headerlink" title="HIVE的组件"></a>HIVE的组件</h2><p>![Hive组件](<a href="https://cdn.jsdelivr.net/gh/">https://cdn.jsdelivr.net/gh/</a> zzy-1128&#x2F;photohouse&#x2F;hexo&#x2F;hive_photo202405091046033.png)</p><p><strong>1.用户接口</strong></p><p>包括CLI，JDBC&#x2F;ODBC、WebGUI。<br>CLI(Command Line Interface)即命令行，是Hive的默认模式。<br>HIVE中的Thrift服务器允许外部客户端通过网络与Hive交互，类似于JDBC或ODBC协议。（JDBC&#x2F;ODBC即Java数据库连接，是Hive的默认模式。<br>WebGUI是Hive的Web界面，提供给用户友好的操作界面。</p><p><strong>2.元数据存储</strong><br>通常是存储在关系数据库如MySQL、Postgresql等。</p><p><strong>3.解释器</strong><br>将SQL转换为MapReduce任务，最后提交给Hadoop执行。</p><p><strong>4.编译器</strong><br>将SQL编译成可以运行的MapReduce程序。</p><p><strong>5.优化器</strong><br>优化MR程序，转换为执行效率更高的执行计划。</p><p><strong>6.执行器</strong><br>提交MR程序给Hadoop执行，然后返回结果。HIVE支持Mapreduce、Tez和Spark三种执行引擎。</p><h2 id="Hive数据模型"><a href="#Hive数据模型" class="headerlink" title="Hive数据模型"></a>Hive数据模型</h2><p>![文件位置关系](<a href="https://cdn.jsdelivr.net/gh/">https://cdn.jsdelivr.net/gh/</a> zzy-1128&#x2F;photohouse&#x2F;hexo&#x2F;hive_photo202405091046455.png)<br>HIVE中的数据模型分为三层：<br><strong>1.元数据</strong><br>元数据存储在关系数据库中，如MySQL、Postgresql等。<br><strong>2.内部表</strong><br>内部表是Hive默认的表类型，数据存储在HDFS中。<br><strong>3.外部表</strong><br>外部表是用户自定义的表类型，数据存储在HDFS中，但元数据存储在Hive的元数据存储中。<br>![Hive与数据库的区别](<a href="https://cdn.jsdelivr.net/gh/">https://cdn.jsdelivr.net/gh/</a> zzy-1128&#x2F;photohouse&#x2F;hexo&#x2F;hive_photo202405091046433.png)</p><h2 id="Hive-Metadata"><a href="#Hive-Metadata" class="headerlink" title="Hive Metadata"></a>Hive Metadata</h2><p>Hive Metadata存储在关系数据库中，如MySQL、Postgresql等。<br>Hive Metadata存储了Hive 创建的database、表及其位置、类型、字段顺序等。</p><h2 id="Hive-Metastore"><a href="#Hive-Metastore" class="headerlink" title="Hive Metastore"></a>Hive Metastore</h2><p>元数据服务，作用是管理Hive Metadata。对外暴露服务地址，让各种客户端通过连接Metastore服务，由Metastore再去连接数据库存取元数据。<br>好处：多个客户可同时连接；客户不知道数据库账号密码，保证元数据安全。</p><h2 id="Metastore的配置方式"><a href="#Metastore的配置方式" class="headerlink" title="Metastore的配置方式"></a>Metastore的配置方式</h2><p>内嵌模式、本地模式、远程模式。<br>区分方式：<br>1.是否需要启动Metastore服务？<br>2.Metadata是存储在内置的数据库（如Derby）中还是远程数据库(如MySQL、Postgresql)中？</p><p>![模式区分判断依据](<a href="https://cdn.jsdelivr.net/gh/">https://cdn.jsdelivr.net/gh/</a> zzy-1128&#x2F;photohouse&#x2F;hexo&#x2F;hive_photo202405091046330.png)</p><h2 id="未完待续…"><a href="#未完待续…" class="headerlink" title="未完待续…."></a>未完待续….</h2>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>数仓是什么？</title>
+    <link href="/2024/05/06/%E6%95%B0%E4%BB%93%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/"/>
+    <url>/2024/05/06/%E6%95%B0%E4%BB%93%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/</url>
+    
+    <content type="html"><![CDATA[<h2 id="数仓是什么？为了分析数据！"><a href="#数仓是什么？为了分析数据！" class="headerlink" title="数仓是什么？为了分析数据！"></a>数仓是什么？为了分析数据！</h2><p>数仓（Data Warehouse）是数据仓库的简称，是一种<strong>面向主题的、集成的、时变的、非易失的数据集合</strong>，用于支持管理决策。</p><p>数仓通常由数据仓库、数据集市和数据湖等组件组成，它们共同构成了一个完整的数据架构。数据仓库用于存储和分析历史数据，数据集市用于存储和分析特定主题的数据，数据湖则用于存储和分析所有类型的数据。</p><p>数仓的目的是提供一种统一的数据访问方式，使得企业能够方便地获取所需的数据，并进行分析和决策。</p><p>数仓通常采用关系型数据库（如Oracle、SQL Server等）来存储和管理数据，同时也支持使用Hadoop等大数据技术来处理和分析数据。</p><p>数仓的构建和维护需要使用相应的工具和平台，如ETL工具（如Sqoop、Kettle等）来提取、转换和加载数据，数据仓库管理和分析平台（如Hive、Impala等）来管理和分析数据。</p><p>数仓的构建和维护需要遵循一定的规范和标准，如数据模型、数据格式、数据质量等。</p><p>数仓的构建和维护需要使用相应的工具和平台，如ETL工具（如Sqoop、Kettle等）来提取、转换和加载数据，数据仓库管理和分析平台（如Hive、Impala等）来管理和分析数据。</p><p>数仓的构建和维护需要遵循一定的规范和标准，如数据模型、数据格式、数据质量等。</p><h2 id="为什么要数仓？"><a href="#为什么要数仓？" class="headerlink" title="为什么要数仓？"></a>为什么要数仓？</h2><p>在哪里进行数据分析？数据库？<br>业务操作分为读操作和写操作，但是<strong>读操作</strong>&#x3D;&#x3D;的压力大于写操作。<br><strong>目的：数据分析与业务解耦合，分析支持决策但不影响业务。</strong><br>OLTP（On-Line Transaction Processing）：联机事务处理，面向业务操作，对事务的响应时间有要求，对数据的实时性要求较高。<br>举例：针对具体业务再数据库联机的日常操作，对少量数据的增删改查。关系型数据库作为数据管理的主要手段。</p><p>OLAP（On-Line Analytical）：联机分析处理，面向数据分析，对事务的响应时间没有要求，对数据的实时性要求较低。<br>举例：针对某些主题的历史数据进行复杂的多维分析。数据仓库是OLAP系统的典型事例。</p><h2 id="数仓分层架构"><a href="#数仓分层架构" class="headerlink" title="数仓分层架构"></a>数仓分层架构</h2><p>操作型数据层（ODS）、数据仓库层（DW）、数据集市层（DM）、数据应用层（DA）。</p><p>ODS：操作型数据层，用于存储原始数据，通常采用关系型数据库（如Oracle、SQL Server等）来存储和管理数据。</p><p>DW：数据仓库层，用于存储经过清洗、转换和整合后的数据，通常采用关系型数据库（如Oracle、SQL Server等）来存储和管理数据。</p><p>DM：数据集市层，用于存储特定主题的数据，通常采用关系型数据库（如Oracle、SQL Server等）来存储和管理数据。</p><p>DA：数据应用层，用于提供数据分析和决策支持，通常采用数据仓库管理和分析平台（如Hive、Impala等）来管理和分析数据。</p><p><strong>分层的好处是：清洗数据结构、数据血缘追踪、减少重复开发（如查询接口）、屏蔽原始数据的异常</strong></p><h2 id="ETL和ELT"><a href="#ETL和ELT" class="headerlink" title="ETL和ELT"></a>ETL和ELT</h2><p>ETL（Extract-Transform-Load）：提取、转换和加载，用于将数据从源系统提取出来，经过清洗、转换和整合后加载到目标系统。</p><p>ELT（Extract-Load-Transform）：提取、加载和转换，用于将数据从源系统提取出来，直接加载到目标系统，然后再进行转换。</p><h2 id="数仓的构建"><a href="#数仓的构建" class="headerlink" title="数仓的构建"></a>数仓的构建</h2><ol><li>数据收集：从业务系统中收集数据，包括原始数据和业务日志。</li></ol>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>网络和操作系统基础</title>
+    <link href="/2024/04/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    <url>/2024/04/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</url>
+    
+    <content type="html"><![CDATA[<h1 id="网络基础"><a href="#网络基础" class="headerlink" title="网络基础"></a>网络基础</h1><h2 id="三次握手过程"><a href="#三次握手过程" class="headerlink" title="三次握手过程"></a>三次握手过程</h2><p>客户端——发送带有SYN标志的数据包——服务端一次握手Client进入syn_sent状态；<br>服务端——发送带有SYN&#x2F;ACK标志的数据包——客户端二次握手服务端进入syn_rcvd；<br>客户端——发送带有ACK标志的数据包——服务端三次握手连接就进入Established状态；</p><h2 id="为什么三次："><a href="#为什么三次：" class="headerlink" title="为什么三次："></a>为什么三次：</h2><p>主要是为了建立可靠的通信信道，保证客户端与服务端同时具备发送、接收数据的能力。</p><h2 id="为什么两次不行："><a href="#为什么两次不行：" class="headerlink" title="为什么两次不行："></a>为什么两次不行：</h2><p>1、防止已失效的请求报文又传送到了服务端，建立了多余的链接，浪费资源。</p><p>2、两次握手只能保证单向连接是畅通的。（为了实现可靠数据传输，TCP协议的通信双方，都必须维护一个序列号，以标识发送出去的数据包中，哪些是已经被对方收到的。三次握手的过程即是通信双方相互告知序列号起始值，并确认对方已经收到了序列号起始值的必经步骤；如果只是两次握手，至多只有连接发起方的起始序列号能被确认，另一方选择的序列号则得不到确认）。</p><h1 id="TCP四次挥手过程"><a href="#TCP四次挥手过程" class="headerlink" title="TCP四次挥手过程"></a>TCP四次挥手过程</h1><h2 id="四次挥手过程："><a href="#四次挥手过程：" class="headerlink" title="四次挥手过程："></a>四次挥手过程：</h2><p>客户端——发送带有FIN标志的数据包——服务端，关闭与服务端的连接，客户端进入FIN-WAIT-1状态。</p><p>服务端收到这个FIN，它发回⼀个ACK，确认序号为收到的序号加1，服务端就进入了CLOSE-WAIT状态。</p><p>服务端——发送⼀个FIN数据包——客户端，关闭与客户端的连接，客户端就进入FIN-WAIT-2状态。</p><p>客户端收到这个FIN，发回ACK报⽂确认，并将确认序号设置为收到序号加1，TIME-WAIT状态。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2024/04/11/hello-world/"/>
+    <url>/2024/04/11/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
