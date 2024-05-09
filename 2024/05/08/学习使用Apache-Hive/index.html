@@ -16,17 +16,23 @@
   <meta name="author" content="智勇爱学习">
   <meta name="keywords" content="">
   
-    <meta name="description" content="HIVE的作用将数据文件映射为一张表。将SQL语法解析编译成为MapReduce的执行程序。 ![Hive架构](https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F; zzy-1128&#x2F;photohouse&#x2F;hexo&#x2F;hive_photo202405091045615.png) HIVE的组件![Hive组件](https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;g">
+    <meta name="description" content="HIVE的作用将数据文件映射为一张表。将SQL语法解析编译成为MapReduce的执行程序。  HIVE的组件 1.用户接口 包括CLI，JDBC&#x2F;ODBC、WebGUI。CLI(Command Line Interface)即命令行，是Hive的默认模式。HIVE中的Thrift服务器允许外部客户端通过网络与Hive交互，类似于JDBC或ODBC协议。（JDBC&#x2F;ODBC即J">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习使用Apache Hive">
 <meta property="og:url" content="https://zzy-1128.github.io/2024/05/08/%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8Apache-Hive/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="HIVE的作用将数据文件映射为一张表。将SQL语法解析编译成为MapReduce的执行程序。 ![Hive架构](https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F; zzy-1128&#x2F;photohouse&#x2F;hexo&#x2F;hive_photo202405091045615.png) HIVE的组件![Hive组件](https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;g">
+<meta property="og:description" content="HIVE的作用将数据文件映射为一张表。将SQL语法解析编译成为MapReduce的执行程序。  HIVE的组件 1.用户接口 包括CLI，JDBC&#x2F;ODBC、WebGUI。CLI(Command Line Interface)即命令行，是Hive的默认模式。HIVE中的Thrift服务器允许外部客户端通过网络与Hive交互，类似于JDBC或ODBC协议。（JDBC&#x2F;ODBC即J">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzy-1128/photohouse/hexo/hive_photo202405091105876.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzy-1128/photohouse/hexo/hive_photo202405091106014.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzy-1128/photohouse/hexo/hive_photo202405091106540.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzy-1128/photohouse/hexo/hive_photo202405091106810.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzy-1128/photohouse/hexo/hive_photo202405091106614.png">
 <meta property="article:published_time" content="2024-05-08T01:25:05.000Z">
-<meta property="article:modified_time" content="2024-05-09T02:46:52.778Z">
+<meta property="article:modified_time" content="2024-05-09T03:06:54.278Z">
 <meta property="article:author" content="智勇爱学习">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/zzy-1128/photohouse/hexo/hive_photo202405091105876.png">
   
   
   
@@ -219,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          594 words
+          494 words
         
       </span>
     
@@ -273,8 +279,8 @@
               <div class="markdown-body">
                 
                 <h2 id="HIVE的作用"><a href="#HIVE的作用" class="headerlink" title="HIVE的作用"></a>HIVE的作用</h2><p>将数据文件<strong>映射</strong>为一张表。<br>将SQL语法解析编译成为MapReduce的执行程序。</p>
-<p>![Hive架构](<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/">https://cdn.jsdelivr.net/gh/</a> zzy-1128&#x2F;photohouse&#x2F;hexo&#x2F;hive_photo202405091045615.png)</p>
-<h2 id="HIVE的组件"><a href="#HIVE的组件" class="headerlink" title="HIVE的组件"></a>HIVE的组件</h2><p>![Hive组件](<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/">https://cdn.jsdelivr.net/gh/</a> zzy-1128&#x2F;photohouse&#x2F;hexo&#x2F;hive_photo202405091046033.png)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zzy-1128/photohouse/hexo/hive_photo202405091105876.png" srcset="/img/loading.gif" lazyload alt="Hive架构"></p>
+<h2 id="HIVE的组件"><a href="#HIVE的组件" class="headerlink" title="HIVE的组件"></a>HIVE的组件</h2><p><img src="https://cdn.jsdelivr.net/gh/zzy-1128/photohouse/hexo/hive_photo202405091106014.png" srcset="/img/loading.gif" lazyload alt="Hive组件"></p>
 <p><strong>1.用户接口</strong></p>
 <p>包括CLI，JDBC&#x2F;ODBC、WebGUI。<br>CLI(Command Line Interface)即命令行，是Hive的默认模式。<br>HIVE中的Thrift服务器允许外部客户端通过网络与Hive交互，类似于JDBC或ODBC协议。（JDBC&#x2F;ODBC即Java数据库连接，是Hive的默认模式。<br>WebGUI是Hive的Web界面，提供给用户友好的操作界面。</p>
 <p><strong>2.元数据存储</strong><br>通常是存储在关系数据库如MySQL、Postgresql等。</p>
@@ -282,11 +288,11 @@
 <p><strong>4.编译器</strong><br>将SQL编译成可以运行的MapReduce程序。</p>
 <p><strong>5.优化器</strong><br>优化MR程序，转换为执行效率更高的执行计划。</p>
 <p><strong>6.执行器</strong><br>提交MR程序给Hadoop执行，然后返回结果。HIVE支持Mapreduce、Tez和Spark三种执行引擎。</p>
-<h2 id="Hive数据模型"><a href="#Hive数据模型" class="headerlink" title="Hive数据模型"></a>Hive数据模型</h2><p>![文件位置关系](<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/">https://cdn.jsdelivr.net/gh/</a> zzy-1128&#x2F;photohouse&#x2F;hexo&#x2F;hive_photo202405091046455.png)<br>HIVE中的数据模型分为三层：<br><strong>1.元数据</strong><br>元数据存储在关系数据库中，如MySQL、Postgresql等。<br><strong>2.内部表</strong><br>内部表是Hive默认的表类型，数据存储在HDFS中。<br><strong>3.外部表</strong><br>外部表是用户自定义的表类型，数据存储在HDFS中，但元数据存储在Hive的元数据存储中。<br>![Hive与数据库的区别](<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/">https://cdn.jsdelivr.net/gh/</a> zzy-1128&#x2F;photohouse&#x2F;hexo&#x2F;hive_photo202405091046433.png)</p>
+<h2 id="Hive数据模型"><a href="#Hive数据模型" class="headerlink" title="Hive数据模型"></a>Hive数据模型</h2><p><img src="https://cdn.jsdelivr.net/gh/zzy-1128/photohouse/hexo/hive_photo202405091106540.png" srcset="/img/loading.gif" lazyload alt="文件位置关系"><br>HIVE中的数据模型分为三层：<br><strong>1.元数据</strong><br>元数据存储在关系数据库中，如MySQL、Postgresql等。<br><strong>2.内部表</strong><br>内部表是Hive默认的表类型，数据存储在HDFS中。<br><strong>3.外部表</strong><br>外部表是用户自定义的表类型，数据存储在HDFS中，但元数据存储在Hive的元数据存储中。<br><img src="https://cdn.jsdelivr.net/gh/zzy-1128/photohouse/hexo/hive_photo202405091106810.png" srcset="/img/loading.gif" lazyload alt="Hive与数据库的区别"></p>
 <h2 id="Hive-Metadata"><a href="#Hive-Metadata" class="headerlink" title="Hive Metadata"></a>Hive Metadata</h2><p>Hive Metadata存储在关系数据库中，如MySQL、Postgresql等。<br>Hive Metadata存储了Hive 创建的database、表及其位置、类型、字段顺序等。</p>
 <h2 id="Hive-Metastore"><a href="#Hive-Metastore" class="headerlink" title="Hive Metastore"></a>Hive Metastore</h2><p>元数据服务，作用是管理Hive Metadata。对外暴露服务地址，让各种客户端通过连接Metastore服务，由Metastore再去连接数据库存取元数据。<br>好处：多个客户可同时连接；客户不知道数据库账号密码，保证元数据安全。</p>
 <h2 id="Metastore的配置方式"><a href="#Metastore的配置方式" class="headerlink" title="Metastore的配置方式"></a>Metastore的配置方式</h2><p>内嵌模式、本地模式、远程模式。<br>区分方式：<br>1.是否需要启动Metastore服务？<br>2.Metadata是存储在内置的数据库（如Derby）中还是远程数据库(如MySQL、Postgresql)中？</p>
-<p>![模式区分判断依据](<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/">https://cdn.jsdelivr.net/gh/</a> zzy-1128&#x2F;photohouse&#x2F;hexo&#x2F;hive_photo202405091046330.png)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zzy-1128/photohouse/hexo/hive_photo202405091106614.png" srcset="/img/loading.gif" lazyload alt="模式区分判断依据"></p>
 <h2 id="未完待续…"><a href="#未完待续…" class="headerlink" title="未完待续…."></a>未完待续….</h2>
                 
               </div>
